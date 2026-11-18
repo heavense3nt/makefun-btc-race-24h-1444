@@ -4,10 +4,11 @@
 // band, with one or two real swings. Tidepool sits out the chop and buys
 // exactly one swing at a time: only when the close has sunk into the
 // bottom fifth of its 10-hour range AND has bounced a little off the
-// recent low — so it buys a turn, not a falling knife. It sells when the
-// close climbs back to the top of the range, or when it slips 1.2% below
-// the best close seen since entry. One position at a time, full size, a
-// handful of trades a day at most.
+// recent low — so it buys a turn, not a falling knife. It sells once the
+// close is back within 2% of the range top — close enough to the top to
+// bank the swing, with the 1.2% trailing stop as the backstop if the price
+// turns first — or when it slips 1.2% below the best close seen since
+// entry. One position at a time, full size, a handful of trades a day at most.
 //
 // Everything here is deterministic: the only inputs are the closes the
 // harness sends, in order. No clock, no network, no randomness, no files.
@@ -20,7 +21,7 @@ const SYMBOL = 'CBBTC';
 // --- tuning: one flat region of the parameter space, not a sharp peak ---
 const LOOKBACK_BARS = 600; // 10 hours of 1-minute closes
 const BUY_BAND = 0.22; // buy only in the bottom 22% of the rolling range
-const SELL_BAND = 0.05; // sell once back within 5% of the range top
+const SELL_BAND = 0.02; // sell once back within 2% of the range top
 const MIN_RANGE = 0.004; // range must span at least 0.4% to be worth trading
 const BOUNCE_WINDOW = 20; // bounce measured against this many recent bars
 const BOUNCE_FRACTION = 0.003; // close must sit 0.3% above the recent low

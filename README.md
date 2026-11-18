@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/btc-race-24h-20261118-1444/heavense3nt/makefun-btc-race-24h-1444/rank.svg)](https://make.fun/bounty/btc-race-24h-20261118-1444/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261118-1444)
 [![reward](https://make.fun/badge/btc-race-24h-20261118-1444/heavense3nt/makefun-btc-race-24h-1444/reward.svg)](https://make.fun/bounty/btc-race-24h-20261118-1444?utm_source=github&utm_medium=readme&utm_campaign=btc-race-24h-20261118-1444)
 
-Tidepool — a patient dip-buying BTC bot: waits for price to wash into the bottom of its 10-hour range and bounce, then rides it back toward the top.
+Tidepool — a patient dip-buying BTC bot: waits for price to wash into the bottom of its 10-hour range and bounce, then rides it back to within 2% of the range top (1.2% trailing stop as backstop). Local dev grade: +19.361669 USDC, 2 trades, max drawdown 0.6518%.
 
 ## Run it
 
